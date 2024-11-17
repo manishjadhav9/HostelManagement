@@ -1,7 +1,7 @@
+
 <?php
-    $dbuser="root";
-    $dbpass="";
-    $host="localhost";
-    $db="hostelmsphp";
-    $mysqli =new mysqli($host,$dbuser, $dbpass, $db);
+$con = mysqli_connect("localhost", "root", "", "hostelmsphp");
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>
