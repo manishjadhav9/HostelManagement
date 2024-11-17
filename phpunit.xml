@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
+    
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./admin</directory>
+            <directory suffix=".php">./student</directory>
+            <directory suffix=".php">./includes</directory>
+        </include>
+        <exclude>
+            <directory>./vendor</directory>
+            <directory>./tests</directory>
+        </exclude>
+    </coverage>
+
+    <testsuites>
+        <testsuite name="Hostel Management Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <server name="DB_CONNECTION" value="mysql"/>
+        <server name="DB_HOST" value="localhost"/>
+        <server name="DB_PORT" value="3306"/>
+        <server name="DB_DATABASE" value="hostelmsphp"/>
+        <server name="DB_USERNAME" value="root"/>
+        <server name="DB_PASSWORD" value=""/>
+    </php>
+
+    <logging>
+        <testdoxText outputFile="test-results.txt"/>
+        <junit outputFile="junit.xml"/>
+    </logging>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./admin</directory>
+            <directory suffix=".php">./student</directory>
+            <directory suffix=".php">./includes</directory>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
