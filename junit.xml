@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="5" assertions="0" errors="5" warnings="0" failures="0" skipped="0" time="0.096427">
-    <testsuite name="Hostel Management Test Suite" tests="5" assertions="0" errors="5" warnings="0" failures="0" skipped="0" time="0.096427">
-      <testsuite name="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" tests="2" assertions="0" errors="2" warnings="0" failures="0" skipped="0" time="0.096229">
-        <testcase name="testDatabaseConnection" class="DatabaseTest" classname="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" line="12" assertions="0" time="0.086128">
-          <error type="Error">DatabaseTest::testDatabaseConnection
-Error: Class "mysqli" not found
+  <testsuite name="" tests="5" assertions="0" errors="5" warnings="0" failures="0" skipped="0" time="0.139290">
+    <testsuite name="Hostel Management Test Suite" tests="5" assertions="0" errors="5" warnings="0" failures="0" skipped="0" time="0.139290">
+      <testsuite name="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" tests="2" assertions="0" errors="2" warnings="0" failures="0" skipped="0" time="0.138887">
+        <testcase name="testDatabaseConnection" class="DatabaseTest" classname="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" line="12" assertions="0" time="0.127695">
+          <error type="mysqli_sql_exception">DatabaseTest::testDatabaseConnection
+mysqli_sql_exception: No such file or directory
 
 /mnt/c/xampp/htdocs/HostelManagement/includes/dbconn.php:6
 /mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php:8</error>
         </testcase>
-        <testcase name="testDatabaseSelection" class="DatabaseTest" classname="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" line="17" assertions="0" time="0.010100">
+        <testcase name="testDatabaseSelection" class="DatabaseTest" classname="DatabaseTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php" line="17" assertions="0" time="0.011192">
           <error type="PHPUnit\Framework\Error\Warning">DatabaseTest::testDatabaseSelection
 Undefined variable $conn
 
 /mnt/c/xampp/htdocs/HostelManagement/tests/DatabaseTest.php:9</error>
         </testcase>
       </testsuite>
-      <testsuite name="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000198">
-        <testcase name="testAddRoom" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="12" assertions="0" time="0.000059">
+      <testsuite name="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000403">
+        <testcase name="testAddRoom" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="12" assertions="0" time="0.000187">
           <error type="PHPUnit\Framework\Error\Warning">RoomManagementTest::testAddRoom
 Undefined variable $conn
 
 /mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php:9</error>
         </testcase>
-        <testcase name="testCheckRoomAvailability" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="30" assertions="0" time="0.000078">
+        <testcase name="testCheckRoomAvailability" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="30" assertions="0" time="0.000077">
           <error type="PHPUnit\Framework\Error\Warning">RoomManagementTest::testCheckRoomAvailability
 Undefined variable $conn
 
 /mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php:9</error>
         </testcase>
-        <testcase name="testUpdateRoom" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="45" assertions="0" time="0.000062">
+        <testcase name="testUpdateRoom" class="RoomManagementTest" classname="RoomManagementTest" file="/mnt/c/xampp/htdocs/HostelManagement/tests/RoomManagementTest.php" line="45" assertions="0" time="0.000140">
           <error type="PHPUnit\Framework\Error\Warning">RoomManagementTest::testUpdateRoom
 Undefined variable $conn
 
