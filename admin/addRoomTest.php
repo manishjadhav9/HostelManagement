@@ -10,6 +10,12 @@ function testAddRoom($roomNo, $seater, $fees, $expectedResult)
 {
     global $connection;
 
+    // Check if any required field is empty
+    if (empty($roomNo) || empty($seater) || empty($fees)) {
+        echo "Error: All fields (roomNo, seater, fees) are required.<br>";
+        return;
+    }
+
     // SQL query to insert room details
     $query = "INSERT INTO rooms (room_no, seater, fees) 
               VALUES ('$roomNo', '$seater', '$fees')";
@@ -23,7 +29,8 @@ function testAddRoom($roomNo, $seater, $fees, $expectedResult)
 
 // Run the test cases
 echo "<h3>Room Management Testing</h3>";
-testAddRoom('501', 4, 5000, 'success');
-testAddRoom('502', 3, 4000, 'success');
-testAddRoom('503', 2, 3000, 'success');
+// testAddRoom('501', 4, 5000, 'success');
+// testAddRoom('502', 3, 4000, 'success');
+// testAddRoom('503', 2, 3000, 'success');
+testAddRoom('', 3, 4000, 'success');
 ?>

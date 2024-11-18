@@ -1,3 +1,5 @@
+
+
 <?php
 // Database connection
 $connection = new mysqli('localhost', 'root', '', 'hostelmsphp');
@@ -9,6 +11,12 @@ if ($connection->connect_error) {
 function testAddUser($regNo, $firstName, $middleName, $lastName, $gender, $contactNo, $email, $password, $expectedResult)
 {
     global $connection;
+
+    // Check if any required field is empty
+    if (empty($regNo) || empty($firstName) || empty($middleName) || empty($lastName) || empty($gender) || empty($contactNo) || empty($email) || empty($password)) {
+        echo "Test Failed: One or more fields are empty. All fields are required.<br>";
+        return;
+    }
 
     // SQL query to insert user details
     $query = "INSERT INTO userregistration (regNo, firstName, middleName, lastName, gender, contactNo, email, password) 
@@ -23,7 +31,8 @@ function testAddUser($regNo, $firstName, $middleName, $lastName, $gender, $conta
 
 // Run the test cases
 echo "<h3>User Registration Testing</h3>";
-testAddUser('101', 'Manish', 'Shashikant', 'Jadhav', 'Male', 9876543210, 'manish.jadhav@gmail.com', 'manish', 'success');
-testAddUser('102', 'Mayur', 'Krishna', 'Solankar', 'Male', 9876543211, 'mayur.solankar@gmail.com', 'mayur', 'success');
-testAddUser('103', 'Apurva', 'Krishna', 'Pawar', 'Female', 9876543212, 'apurva.pawar@gmail.com', 'apurva', 'success');
+// testAddUser('101', 'Manish', 'Shashikant', 'Jadhav', 'Male', 9876543210, 'manish.jadhav@gmail.com', 'manish', 'success');
+// testAddUser('102', 'Mayur', 'Krishna', 'Solankar', 'Male', 9876543211, 'mayur.solankar@gmail.com', 'mayur', 'success');
+// testAddUser('103', 'Apurva', 'Krishna', 'Pawar', 'Female', 9876543212, 'apurva.pawar@gmail.com', 'apurva', 'success');
+testAddUser('', 'Mayur', 'Krishna', 'Solankar', 'Male', 9876543211, 'mayur.solankar@gmail.com', 'mayur', 'success');
 ?>

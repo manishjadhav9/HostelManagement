@@ -10,6 +10,12 @@ function deleteUser($regNo)
 {
     global $connection;
 
+    // Check if regNo is empty
+    if (empty($regNo)) {
+        echo "Error: Registration Number is required to delete the user.<br>";
+        return;
+    }
+
     // SQL query to delete user
     $query = "DELETE FROM userregistration WHERE regNo='$regNo'";
 
@@ -20,9 +26,7 @@ function deleteUser($regNo)
     }
 }
 
-// Hardcoded test case (delete the user with regNo '101')
-$regNo = '102';
+$regNo = '102'; // Change this to an empty string to test the validation
 
-// Call the delete function with the hardcoded regNo
 deleteUser($regNo);
 ?>

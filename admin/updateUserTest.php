@@ -10,6 +10,12 @@ function updateUser($regNo, $newFirstName, $newMiddleName, $newLastName, $newEma
 {
     global $connection;
 
+    // Check if any required field is empty
+    if (empty($regNo) || empty($newFirstName) || empty($newMiddleName) || empty($newLastName) || empty($newEmail)) {
+        echo "Error: One or more fields are empty. All fields are required for updating user details.<br>";
+        return;
+    }
+
     // SQL query to update user details, including middle name
     $query = "UPDATE userregistration 
               SET firstName='$newFirstName', middleName='$newMiddleName', lastName='$newLastName', email='$newEmail' 
